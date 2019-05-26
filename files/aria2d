@@ -1,0 +1,8 @@
+#!/bin/sh
+mkdir -p /var/aria2/downloads
+touch /var/aria2/aria2_session.txt
+/usr/bin/aria2c \
+    --enable-rpc=true \
+    --rpc-allow-origin-all=true \
+    --rpc-listen-all=true \
+    --conf-path=/etc/aria2-daemon.conf
